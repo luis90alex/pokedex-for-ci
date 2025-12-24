@@ -1,0 +1,18 @@
+name: Say hello
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+jobs:
+  hello-world:
+    # Ubuntu stable version at 22/12/25
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Echo the message
+        run: echo "Hello world"
